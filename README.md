@@ -31,7 +31,7 @@
 
 ## app.use('/api/avail', require('./routes/availproductsRouter'))
 `Here admin could create their product and created product list could be shown to custormer`
-`
+
 `router.route('/products').get(availproductsCtrl.getProducts).post(auth, authAdmin, availproductsCtrl.createProduct)`
 `router.route('/products/:id').delete(auth, authAdmin, availproductsCtrl.deleteProduct).patch(auth, authAdmin, availproductsCtrl.updateProduct)`
 
