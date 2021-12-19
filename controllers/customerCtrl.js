@@ -39,20 +39,36 @@ const customerCtrl = {
             await Customers.findOneAndUpdate({_id: req.user.id}, {
                 cart: req.body.cart
             })
-
+        
             return res.json({msg: "Added to cart"})
         } catch (err) {
             return res.status(500).json({msg: err.message})
         }
     },
-    getAllOrderstoDeliver:async(req, res)=>{
+    getAllOrderstoPicked:async(req, res)=>{
         try{
-            const orders = await Customers.find({deliveryStatus:false})
+            const orders = await Customers.find({pickedStatus:false,deliveryStatus:false})
             res.json(orders)
         }catch(err){
             return res.status(500).json({msg: err.message}) 
         }
-    }
+    },
+    getAllPickedOrders:async(req, res)=>{
+        try{
+            const orders = await Customers.find({pickedStatus:true,deliveryStatus:false})
+            res.json(orders)
+        }catch(err){
+            return res.status(500).json({msg: err.message}) 
+        }
+    },
+    getAllDeliveredOrders:async(req, res)=>{
+        try{
+            const orders = await Customers.find({pickedStatus:true,deliveryStatus:true})
+            res.json(orders)
+        }catch(err){
+            return res.status(500).json({msg: err.message}) 
+        }
+    },
   
  }
 

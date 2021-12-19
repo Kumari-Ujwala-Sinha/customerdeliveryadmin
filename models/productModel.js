@@ -3,8 +3,7 @@ const mongoose = require('mongoose')
 const productSchema = mongoose.Schema({
     deliveryitem:{
         type:String,
-        required:[true, "Please enter delivery item name"],
-        
+        required:[true, "Please enter delivery item name"],      
     },
     addresstodeli:{
         type:String,

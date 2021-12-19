@@ -58,7 +58,7 @@ const productCtrl = {
             return res.status(500).json({msg: err.message})
         }
     },
-    updatepickedStatus:async(req, res) =>{
+    updatedeliveredStatus:async(req, res) =>{
         try {
             const {deliveredStatus} = req.body;
             await Product.findOneAndUpdate({_id: req.params.id}, {deliveredStatus})

@@ -18,8 +18,10 @@ app.use(fileUpload({
 // Routes
 app.use('/user', require('./routes/userRouter'))
 app.use('/customer', require('./routes/customerRouter'))
+app.use('/api', require('./routes/categoryRouter'))
 app.use('/api', require('./routes/productRouter'))
 app.use('/api', require('./routes/upload'))
+app.use('/api/avail', require('./routes/availproductsRouter'))
 
 
 // Connect to mongodb
