@@ -1,8 +1,8 @@
 
 ## app.use('/customer', require('./routes/customerRouter'))
 `Here customer could register by their mobile otp on email and add their product and admin will get list of ordered product`
-router.post('/customerlogin', customerCtrl.customerlogin)
-router.get('/customerinfor', authCustom,  customerCtrl.getCustomer)
+`router.post('/customerlogin', customerCtrl.customerlogin)`
+`router.get('/customerinfor', authCustom,  customerCtrl.getCustomer)`
 router.get('/customerorderstobepicked',   customerCtrl.getAllOrderstoPicked)
 router.get('/deliveryboypickedorders',   customerCtrl.getAllPickedOrders)
 router.get('/successdeliveredorders',   customerCtrl.getAllDeliveredOrders)
